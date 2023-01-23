@@ -11,22 +11,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold( //Scaffold : 이미지를 상/중/하로 나눠줌
         appBar: AppBar(
-          actions: [Icon(Icons.star), Icon(Icons.star)],
-          leading: Icon(Icons.star), title: Text('ddd'),
+          title: Text('당근마켓'),
+          backgroundColor: Colors.white60,
         ),
-        body: SizedBox(
+        body: Container(
+          width: double.infinity, height: 300,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black)
+          ),
+          child: Row(
+            children: [
+              Container(
+                width: 300,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black)
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(
 
-          // child: Text('안녕하세요',
-          //   //style: TextStyle(color: Color.fromRGBO(r, g, b, opacity)),
-          //   style: TextStyle(
-          //       fontSize: 30,
-          //       letterSpacing: 1,
-          //       fontWeight: FontWeight.w700),
-          // ),
-          // child: IconButton(
-          //   icon: Icon(Icons.star),
-          //   onPressed: (){},
-          // )
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       )
     );
