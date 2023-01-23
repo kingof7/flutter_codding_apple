@@ -10,35 +10,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold( //Scaffold : 이미지를 상/중/하로 나눠줌
-        appBar: AppBar(
-          title: Text('당근마켓'),
-          backgroundColor: Colors.white60,
-        ),
-        body: Container(
-          width: double.infinity, height: 300,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black)
-          ),
-          child: Row(
-            children: [
-              Container(
-                width: 300,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black)
-                ),
-                child: Column(
-                  children: [
-                    SizedBox(
-
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
+        appBar: AppBar(),
+        body: Column(
+          children: [
+            Expanded(child: Container(color: Colors.blue)),
+            Container(width: 100, color: Colors.green),
+            // Flexible(child: Container(color: Colors.blue), flex: 5),
+            // Flexible(child: Container(color: Colors.green), flex: 5),
+            // Flexible(child: Container(color: Colors.red), flex: 5), // 5:5:5면 3등분
+          ],
+        )
       )
     );
   }
