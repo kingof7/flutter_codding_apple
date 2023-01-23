@@ -11,14 +11,36 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold( //Scaffold : 이미지를 상/중/하로 나눠줌
         appBar: AppBar(),
-        body: Column(
-          children: [
-            Expanded(child: Container(color: Colors.blue)),
-            Container(width: 100, color: Colors.green),
-            // Flexible(child: Container(color: Colors.blue), flex: 5),
-            // Flexible(child: Container(color: Colors.green), flex: 5),
-            // Flexible(child: Container(color: Colors.red), flex: 5), // 5:5:5면 3등분
-          ],
+        body: Container(
+          height: 150,
+          padding: EdgeInsets.all(10),
+          child: Row(
+            children: [
+              Flexible(
+                flex: 4,
+                child: Image.asset('doge.png')
+              ),
+              Flexible(
+                flex: 6,
+                child: Container( // 폭이 작으니 키우자
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start, // 왼쪽 정렬
+                    children: [
+                      Text('카메라 팝니다.'),
+                      Text('금호동 3가'),
+                      Text('700,000원'),
+                      Row( // 크게만들자
+                        mainAxisAlignment: MainAxisAlignment.start, // 우측
+                        children: [
+                          Icon(Icons.favorite),
+                          Text('4')
+                        ],
+                      )
+                    ],
+                  ),
+                ))
+            ]
+          )
         )
       )
     );
