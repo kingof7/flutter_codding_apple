@@ -19,19 +19,14 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('앱임')
         ),
-        body: Text('안녕'),
-        bottomNavigationBar: BottomAppBar(
-          child: SizedBox( // Container 대신 SizedBox 써라 >> 더가볍담
-            height: 100,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(Icons.phone),
-                Icon(Icons.message),
-                Icon(Icons.contact_page),
-              ],
+        body: Align(
+          alignment: Alignment.centerLeft,
+          child: Container(
+            width: 30, height: double.infinity,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.green),
             ),
-          )
+          ),
         ),
       )
     );
